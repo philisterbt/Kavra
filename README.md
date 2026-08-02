@@ -83,6 +83,4 @@ Frontend `http://localhost:5173` adresinde çalışacaktır.
 
 ---
 
-## 📄 Lisans
 
-Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
