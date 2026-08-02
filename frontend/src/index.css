@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #f8fafc;
+    --text-main: #0f172a;
+    
+    /* Alexandria — High-End Editorial Color Tokens */
+    --color-primary: #094cb2;
+    --color-primary-container: #1d64d8;
+    --color-tertiary: #6d5e00;
+    --color-tertiary-light: #fef9c3;
+    
+    /* Surface Tiers (No-Line Boundary Rule) */
+    --surface-lowest: #ffffff;
+    --surface-low: #f8fafc;
+    --surface: #f1f5f9;
+    --surface-high: #e2e8f0;
+    --surface-dim: #cbd5e1;
+    
+    --ghost-border: rgba(9, 76, 178, 0.12);
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* Alexandria Typography System */
+.font-headline {
+  font-family: 'Noto Serif', Georgia, serif;
+}
+
+.font-serif-heading {
+  font-family: 'Noto Serif', Georgia, serif;
+}
+
+.font-body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.font-label {
+  font-family: 'Public Sans', system-ui, sans-serif;
+}
+
+/* Alexandria Component Buttons */
+
+/* 1. Primary Button: Gradient Fill (#094cb2 -> #1d64d8) */
+.kavra-btn-primary {
+  background: linear-gradient(135deg, #094cb2 0%, #1d64d8 100%);
+  color: #FFFFFF;
+  padding: 0.65rem 1.6rem;
+  border-radius: 9999px;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px rgba(9, 76, 178, 0.25);
+  border: none;
+}
+
+.kavra-btn-primary:hover {
+  background: linear-gradient(135deg, #073b8c 0%, #1754b8 100%);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(9, 76, 178, 0.35);
+}
+
+/* 2. Secondary Button: Surface-High Background + Primary Text */
+.kavra-btn-secondary {
+  background: #e2e8f0;
+  color: #094cb2;
+  padding: 0.65rem 1.6rem;
+  border-radius: 9999px;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+}
+
+.kavra-btn-secondary:hover {
+  background: #cbd5e1;
+  color: #073b8c;
+}
+
+/* 3. Inverted / Dark Button */
+.kavra-btn-inverted {
+  background: #0f172a;
+  color: #FFFFFF;
+  padding: 0.65rem 1.6rem;
+  border-radius: 9999px;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+}
+
+.kavra-btn-inverted:hover {
+  background: #1e293b;
+}
+
+/* 4. Outlined / Ghost Button */
+.kavra-btn-outline {
+  background: transparent;
+  color: #094cb2;
+  border: 1.5px solid rgba(9, 76, 178, 0.25);
+  padding: 0.6rem 1.5rem;
+  border-radius: 9999px;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.kavra-btn-outline:hover {
+  background: #eff6ff;
+  border-color: #094cb2;
+  color: #094cb2;
+}
+
+/* Alexandria Archival Badges */
+.badge-physics {
+  background-color: #eff6ff;
+  color: #094cb2;
+}
+
+.badge-chemistry {
+  background-color: #fef9c3;
+  color: #6d5e00;
+}
+
+.badge-biology {
+  background-color: #f0fdf4;
+  color: #15803d;
+}
+
+.badge-complex {
+  background-color: #f5f3ff;
+  color: #6366f1;
+}
+
+.badge-organelle {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.badge-archival {
+  background-color: #fef9c3;
+  color: #6d5e00;
+}
+
+/* Glassmorphism Floating Menu (80% opacity + 20px backdrop-blur) */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.80);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Alexandria Tonal Layering Cards (No explicit borders, surface shifts) */
+.glass-card {
+  background: #ffffff;
+  border-radius: 24px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
+}
+
+.glass-card:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -12px rgba(9, 76, 178, 0.10);
+}
+
+.auremin-grid {
+  background-image: radial-gradient(rgba(9, 76, 178, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
